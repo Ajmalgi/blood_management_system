@@ -14,3 +14,6 @@ def blog(request):
 def contact(request):
     return render(request,'patient_templates/contact.html')
 
+def  bms_details(request):
+    return render(request,'patient_templates/what_is_bms.html')
+

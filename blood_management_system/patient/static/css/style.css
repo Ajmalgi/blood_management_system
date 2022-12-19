@@ -225,7 +225,7 @@ figure {
   }
 }
 .fh5co-cover .desc span {
-  display: block;
+ 
   margin-bottom: 30px;
   font-size: 28px;
   letter-spacing: 1px;
@@ -1470,3 +1470,8 @@ figure {
 /*# sourceMappingURL=style.css.map */
 
 
+.cover1_btn{ 
+  font-size: 18px;
+  line-height: 1.33333;
+  border-radius: 50px;
+}
