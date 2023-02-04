@@ -1,5 +1,6 @@
 {% extends './base.html'%}
 {% load static %}
+{% block link%} <link rel="stylesheet" href="{%static 'css/about.css' %}"> {% endblock %}
    
  {%block content%}
  <div id="fh5co-wrapper">
@@ -8,7 +9,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-6 col-sm-6 text-left fh5co-link">
-					<a href="#">Register</a>
+					<a href="{% url 'common_app:register' %}">Register</a>
 					<a href="#">Login</a>
 					<a href="#">Contact</a>
 				</div>
@@ -24,12 +25,12 @@
 		<div class="container">
 			<div class="nav-header">
 				<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle dark"><i></i></a>
-				<h1 id="fh5co-logo"><a href="{% url 'patient_app:index' %}">Blood <span style="color:#181a1a;">Wings</span></a></h1>
+				<h1 id="fh5co-logo"><a href="{% url 'common_app:index' %}">Blood <span style="color:#181a1a;">Wings</span></a></h1>
 				<!-- START #fh5co-menu-wrap -->
 				<nav id="fh5co-menu-wrap" role="navigation">
 					<ul class="sf-menu" id="fh5co-primary-menu">
 						<li class="active">
-							<a href="{% url 'patient_app:index' %}">Home</a>
+							<a href="{% url 'common_app:index' %}">Home</a>
 						</li>
 						<li>
 							<a href="#" class="fh5co-sub-ddown">Blood Banks</a>
@@ -39,9 +40,9 @@
 								 <li><a href="#">Medical Mission</a></li>
 							</ul>
 						</li>
-						<li><a href="{% url 'patient_app:about' %}">About</a></li>
-						<li><a href="{% url 'patient_app:blog' %}">Blog</a></li>
-						<li><a href="{% url 'patient_app:contact' %}">Contact</a></li>
+						<li><a href="{% url 'common_app:about' %}">About</a></li>
+						<li><a href="{% url 'common_app:blog' %}">Blog</a></li>
+						<li><a href="{% url 'common_app:contact' %}">Contact</a></li>
 						<li>
 							<a href="#" class="fh5co-sub-ddown">Get Involved</a>
 							<ul class="fh5co-sub-menu">
@@ -75,46 +76,66 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12 text-center heading-section">
-						<h3>How we started.</h3>
-						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+						<h3>Donation Process</h3>
+						<p>The donation process from the time you arrive center until the time you leave</p>
 					</div>
 				</div>
+				<section id="process" class="donation-care">
+					<div class="container donaticon_process">
+				  <div class="container  mt-5 donaticon_process">
+				
+					
+					   <div class="row donation_row">
+							<div class="col-md-3 col-sm-6 vd ">
+							   <div class="bkjiu">
+								<img class="img-fluid" src="{% static 'images/g1.jpg'%}" alt="">
+								<h4><b>1 - </b>Registration</h4>
+								<p>You need to complete a very simple registration form. Which contains all required contact information to enter in the donation process. </p>
+								<!-- <button class="btn btn-sm btn-danger">Readmore <i class="fas fa-arrow-right"></i></button> -->
+								</div>
+							</div>
+							<div class="col-md-3 col-sm-6  vd">
+							   <div class="bkjiu">
+								<img  class="img-fluid"src="{% static 'images/g2.jpg' %}" alt="">
+								   <h4><b>2 - </b>Screening</h4>
+								<p>A drop of blood from your finger will take for simple test to ensure that your blood iron levels are proper enough for donation process.</p>
+								<!-- <button class="btn btn-sm btn-danger">Readmore <i class="fas fa-arrow-right"></i></button> -->
+								</div>
+							</div>
+							<div class="col-md-3 col-sm-6 vd">
+							   <div class="bkjiu">
+								  <img class="img-fluid " src="{% static 'images/g3.jpg' %}" alt="">
+								  <h4><b>3 - </b>Donation</h4>
+								  <p>After ensuring and passed screening test successfully you will be directed to a donor bed for donation. It will take only 6-10 minutes.</p>
+								<!-- <button class="btn btn-sm btn-danger">Readmore <i class="fas fa-arrow-right"></i></button> -->
+							   </div>
+							</div>
+							<div class="col-md-3 col-sm-6  vd">
+							   <div class="bkjiu">
+								   <img class="img-fluid" src="{% static 'images/g4.jpg' %}" alt="">
+								   <h4><b>4 - </b>Save Life</h4>
+									<p>Yay! You've saved a life.</p>
+									<!-- <button class="btn btn-sm btn-danger">Readmore <i class="fas fa-arrow-right"></i></button> -->
+							   </div> 
+							</div>
+					   </div>
+					   
+						
+					</div>
+				    </div>
+			    </section>
+  
+ 
 
-				<div class="row row-bottom-padded-md">
-					<div class="col-md-12 text-center animate-box">
-						<p><img src="{% static 'images/cover_bg_2.jpg' %}" alt="Free HTML5 Bootstrap Template" class="img-responsive"></p>
-					</div>
-					<div class="col-md-6 text-center animate-box">
-						<p><img src=" {% static 'images/cover_bg_2.jpg' %}" alt="Free HTML5 Bootstrap Template" class="img-responsive"></p>
-					</div>
-					<div class="col-md-6 text-center animate-box">
-						<p><img src="{% static 'images/cover_bg_3.jpg' %}" alt="Free HTML5 Bootstrap Template" class="img-responsive"></p>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-4">
-						<div class="feature-text">
-							<h3>Love</h3>
-							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-						</div>
-					</div>
-					<div class="col-md-4">
-						<div class="feature-text">
-							<h3>Compassion</h3>
-							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-						</div>
-					</div>
-					<div class="col-md-4">
-						<div class="feature-text">
-							<h3>Charity</h3>
-							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-						</div>
-					</div>
+
+
+
+			
 				</div>
 
 				
-			</div>
 		</div>
+		
 
 		
 		<div id="fh5co-portfolio">
@@ -132,7 +153,7 @@
 					<div class="col-md-12">
 						<ul id="fh5co-portfolio-list">
 
-							<li class="two-third animate-box" data-animate-effect="fadeIn" style="background-image: url('static/images/cover_bg_2.jpg'); ">
+							<li class="two-third animate-box" data-animate-effect="fadeIn" style="background-image: url('static/images/p1.jpg'); ">
 								<a href="#" class="color-3">
 									<div class="case-studies-summary">
 										<span>Give Love</span>
@@ -141,7 +162,7 @@
 								</a>
 							</li>
 						
-							<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url('static/images/cover_bg_3.jpg'); ">
+							<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url('static/images/p2.jpg'); ">
 								<a href="#" class="color-4">
 									<div class="case-studies-summary">
 										<span>Give Love</span>
@@ -150,7 +171,7 @@
 								</a>
 							</li>
 
-							<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url('static/images/cover_bg_1.jpg'); "> 
+							<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url('static/images/p4.jpg'); "> 
 								<a href="#" class="color-5">
 									<div class="case-studies-summary">
 										<span>Give Love</span>
@@ -158,7 +179,7 @@
 									</div>
 								</a>
 							</li>
-							<li class="two-third animate-box" data-animate-effect="fadeIn" style="background-image: url('staticimages/cover_bg_3.jpg'); ">
+							<li class="two-third animate-box" data-animate-effect="fadeIn" style="background-image: url('static/images/p3.jpg'); ">
 								<a href="#" class="color-6">
 									<div class="case-studies-summary">
 										<span>Give Love</span>
